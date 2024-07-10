@@ -1,0 +1,5 @@
+__pyceshe__/
+*.pyc
+.idea
+venv
+.venv
