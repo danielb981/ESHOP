@@ -1,13 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.auth.models import news
+
 # Create your models here.
 
 class NewsCategory(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(verbose_name="Описание", null=True, blank=True)
     new = models.ForeignKey(
-        to=news,
+        to=User,
         on_delete=models.SET_NULL,
         null=True, blank=True,
         verbose_name="Категория"

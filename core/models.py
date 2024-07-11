@@ -32,8 +32,8 @@ class Product(models.Model):
     price = models.IntegerField()
     qty = models.IntegerField(default=0)
     costumer_views = models.ManyToManyField(
-        to=costumer_views
-
+        to=User,
+        blank=True,
     )
     category = models.ForeignKey(
         to=Category,
